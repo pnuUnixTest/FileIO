@@ -33,7 +33,7 @@ void loadStudentInfo(Student students[], int* count) {
         (*count)++;
         if (*count >= MAX_STUDENTS) {
             printf("Student list is full! Cannot load more data from file.\n\n");
-            _____[10]_____ // Closes the stream.;
+            _____[10]_____ // Close the stream.;
             return;
         }
     }
@@ -123,23 +123,23 @@ void updateStudentInfo(Student students[], int count, int id) {
             printf("3. Student ID\n");
             printf("Enter your choice: ");
             scanf("%d", &choice);
-            getchar(); // buffer clear
+            getchar(); // clear buffer
 
             switch (choice) {
                 case 1:
                     printf("Enter new name: ");
                     scanf("%49[^\n]", _____[2]_____); //Update the name in the i-th student struct.
-                    getchar(); // buffer clear
+                    getchar(); // clear buffer
                     break;
                 case 2:
                     printf("Enter new age: ");
                     scanf("%d", _____[3]_____); //Update the age in the i-th student struct.
-                    getchar(); // buffer clear
+                    getchar(); // clear buffer
                     break;
                 case 3:
                     printf("Enter new student ID: ");
                     scanf("%d", _____[4]_____); //Update the student ID in the i-th student struct.
-                    getchar(); // buffer clear
+                    getchar(); // clear buffer
                     break;
                 default:
                     printf("Invalid choice.\n");
