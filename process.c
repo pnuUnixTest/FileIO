@@ -10,7 +10,7 @@ void loadStudentInfo(Student students[], int* count) {
 
     //==============Your Code==============
 
-    FILE* file = _____[1]_____("result.txt", _____[2]_____); //Opens the 'result.txt' file using the read mode.
+    FILE* file = _____[1]_____("result.txt", _____[2]_____); //Open the 'result.txt' file using the read mode.
     if (_____[3]_____) { // Verify that the file pointer is not NULL.
         printf("No history saved.\n\n");
         return;
@@ -21,7 +21,7 @@ void loadStudentInfo(Student students[], int* count) {
     for (int i = 0; i < 2; i++){ // ignore two lines
         if (_____[4]_____) { // Use the 'fgets' function to read a line from 'result.txt' and save it to 'buffer'. Verify that the result is not NULL.
             printf("Error reading header from file.\n\n");
-            _____[5]_____ // Closes the stream.
+            _____[5]_____ // Close the stream.
             return;
         }
     }
@@ -29,8 +29,7 @@ void loadStudentInfo(Student students[], int* count) {
     // Read student information from the file and populate the 'students' array.
     int j;
     while (fscanf(file, "%d. %49s %d %d", &j, _____[6]_____ , _____[7]_____ , _____[8]_____) == _____[9]_____) {
-        /* Store the information from the file in the *count position of the students array.
-           The fscanf() function converts successfully and returns the number of fields specified. */
+        // Store the information from the file to the students array at position '*count'.
         (*count)++;
         if (*count >= MAX_STUDENTS) {
             printf("Student list is full! Cannot load more data from file.\n\n");
@@ -39,7 +38,7 @@ void loadStudentInfo(Student students[], int* count) {
         }
     }
 
-    _____[11]_____ // Closes the stream.
+    _____[11]_____ // Close the stream.
 
 
     //==============Your Code==============
@@ -57,15 +56,15 @@ void inputStudentInfo(Student* student, int* count) {
 
     printf("Enter student name: ");
     scanf("%49[^\n]", _____[1]_____); //Store the name in the Student struct.
-    getchar(); // buffer clear
+    getchar(); // clear buffer
 
     printf("Enter student age: ");
     scanf("%d", _____[2]_____); //Store the age in the Student struct.
-    getchar(); // buffer clear
+    getchar(); // clear buffer
 
     printf("Enter student ID: ");
     scanf("%d", _____[3]_____); //Store the student ID in the Student struct.
-    getchar(); // buffer clear
+    getchar(); // clear buffer
 
     //==============Your Code==============
 
@@ -203,7 +202,7 @@ void storeAllStudents(const Student students[], int count) {
         //Print out the name, age, and class number of the i-th student struct to the result.txt file.
     }
 
-    _____[7]_____ // Closes the stream.
+    _____[7]_____ // Close the stream.
 
     //==============Your Code==============
 
