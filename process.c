@@ -11,15 +11,15 @@ void inputStudentInfo(Student* student) {
     //==============Your Code==============
 
     printf("Enter student name: ");
-    scanf("%49[^\n]", _____[1]_____); //Store the name in the Student struct.
+    scanf("%49[^\n]", _____[1]_____); //Store the name in the 'student' struct.
     while (getchar() != '\n'); // clear buffer
 
     printf("Enter student age: ");
-    scanf("%d", _____[2]_____); //Store the age in the Student struct.
+    scanf("%d", _____[2]_____); //Store the age in the 'student' struct.
     while (getchar() != '\n'); // clear buffer
 
     printf("Enter student ID: ");
-    scanf("%d", _____[3]_____); //Store the studentID in the Student struct.
+    scanf("%d", _____[3]_____); //Store the studentID in the 'student' struct.
     while (getchar() != '\n'); // clear buffer
 
     //==============Your Code==============
@@ -39,7 +39,7 @@ void enrollStudentInfo(const Student* student) {
     }
 
     fprintf(_____[4]_____, "%s %d %d\n", _____[5]_____, _____[6]_____, _____[7]_____);
-    //Print out the name, age, and class number of the i-th student struct to the result.txt file.
+    //Print out the name, age, and class number of the 'student' struct to the 'result.txt' file.
 
     _____[8]_____ // Close the stream.
 }
@@ -62,7 +62,7 @@ void printAllStudents() {
 
     printf("%s %-50s %-3s %-10s\n", "No.", "Name", "Age", "Student ID");
 
-    while (fscanf(_____[4]_____, "%49s %d %d", _____[5]_____ , _____[6]_____ , _____[7]_____) == _____[8]_____) { // Store the information from the file.
+    while (fscanf(_____[4]_____, "%49s %d %d", _____[5]_____ , _____[6]_____ , _____[7]_____) == _____[8]_____) { // Store the information in the file to the 'student' struct.
         printf("%02d. %-50s %3d %10d\n", idx, student.name, student.age, student.studentID);
         idx++;
     }
